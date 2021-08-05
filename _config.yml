@@ -287,3 +287,4 @@ defaults:
       comments: # true
       share: false
       related: true
+      sidebar_main: true
