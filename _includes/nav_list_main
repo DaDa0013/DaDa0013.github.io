@@ -33,7 +33,7 @@
         <span class="nav__sub-title">Data Structure</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Data Structure" %}
+                    {% if category[0] == "DS" %}
                         <li><a href="/categories/data_structure" class="">자료구조 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
