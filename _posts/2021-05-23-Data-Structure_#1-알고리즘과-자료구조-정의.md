@@ -1,7 +1,7 @@
 ---
 title: "Data Structure_#1 알고리즘과 자료구조 정의"
 categories: 
-  - DS
+  - Data Structure
   - Python
 tags:
   - Data Structure
