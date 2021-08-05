@@ -12,25 +12,34 @@
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
-        <span class="nav__sub-title">C/C++/C#</span>
+        <span class="nav__sub-title">Hacking</span>
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
             <ul>
                 <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
-                    {% if category[0] == "Mgk" %}
-                        <li><a href="/categories/mgk" class="">모각코 ({{category[1].size}})</a></li>
+                    {% if category[0] == "Web" %}
+                        <li><a href="/categories/Web" class="">Web Hacking ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "DataStructure" %}
+                    {% if category[0] == "Reverse" %}
+                        <li><a href="/categories/reverse" class="">Reverse Engineering ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">Data Structure</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Data Structure" %}
                         <li><a href="/categories/data_structure" class="">자료구조 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-        <span class="nav__sub-title">Coding Test</span>
+
+        <span class="nav__sub-title">Algorithm</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Algorithm" %}
@@ -38,7 +47,58 @@
                     {% endif %}
                 {% endfor %}
             </ul>
- 
+
+        <span class="nav__sub-title">DB</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "MySQL" %}
+                        <li><a href="/categories/my_SQL" class="">My SQL({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+        <span class="nav__sub-title">Data Science</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "R" %}
+                        <li><a href="/categories/r" class="">R({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Pandas" %}
+                        <li><a href="/categories/pandas" class="">Pandas({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Numpy" %}
+                        <li><a href="/categories/numpy" class="">Numpy({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">Machine Learning</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Machine Learning" %}
+                        <li><a href="/categories/machine_learning" class="">R({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">Deap Learning</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Deap Learning" %}
+                        <li><a href="/categories/deap_learning" class="">R({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        
+            
+
+
       </li>
   </ul>
 </nav>
