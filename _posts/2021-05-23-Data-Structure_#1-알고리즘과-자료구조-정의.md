@@ -2,6 +2,7 @@
 title: "Data Structure_#1 알고리즘과 자료구조 정의"
 categories: 
   - Data Structure
+  - Python
 tags:
   - Data Structure
   - Python
@@ -117,5 +118,5 @@ algorithm Array Max(A,n):
 
 
 
-
+### 
 
