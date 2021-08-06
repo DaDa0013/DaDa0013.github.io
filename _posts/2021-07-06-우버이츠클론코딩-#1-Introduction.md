@@ -14,6 +14,8 @@ tags:
   - typeORM
   - postgreSQL
   - pgadmin4
+toc: true
+toc_sticky: true
 ---
 ## 우버이츠 백엔드
 1. 우버 이츠 백엔드 만들기
