@@ -1,5 +1,5 @@
-{%- for post in site.categories[include.taxonomy] -%}
+{%- for post in site.categories -%}
   {%- unless post.hidden -%}
-    {% include archive-single.html %}
+    {% include archive-single2.html %}
   {%- endunless -%}
 {%- endfor -%}
