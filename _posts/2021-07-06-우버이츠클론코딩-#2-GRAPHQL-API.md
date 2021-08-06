@@ -2,9 +2,7 @@
 title: "우버이츠클론코딩 #2 GRAPHQL API"
 categories:
   - clone coding
-  - Uber Eats
-  - Nest JS
-  - typeORM
+  - PostgreSQL
 tags:
   - clone coding
   - Uber Eats
