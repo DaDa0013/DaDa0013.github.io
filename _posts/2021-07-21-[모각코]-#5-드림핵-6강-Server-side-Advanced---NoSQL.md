@@ -2,10 +2,10 @@
 title: "[모각코] #5 드림핵 6강 Server-side Advanced - NoSQL"
 categories:
   - Hacking
-  - MGK
+  - Web
 tags:
   - Hacking
-  - MGK
+  - Web
 toc: true
 toc_sticky: true
 ---
