@@ -5,6 +5,8 @@ categories:
 tags:
   - Data Structure
   - Python
+toc: true  
+toc_sticky: true 
 ---
 
 ## 시간 복잡도(time complexity)
