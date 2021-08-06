@@ -2,10 +2,10 @@
 title: "[모각코] #4 드림핵 4강 Client-side Advanced"
 categories:
   - Hacking
-  - MGK
+  - Web
 tags:
   - Hacking
-  - MGK
+  - Web
 toc: true
 toc_sticky: true
 ---
