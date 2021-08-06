@@ -32,7 +32,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Data Structure" %}
-                        <li><a href="/categories/data_structure" class="">자료구조 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/data_structure" class="">Data Structure ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -41,7 +41,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Algorithm" %}
-                        <li><a href="/categories/algorithm" class="">알고리즘 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/algorithm" class="">Algorithm ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
