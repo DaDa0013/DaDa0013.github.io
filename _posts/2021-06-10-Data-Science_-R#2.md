@@ -6,6 +6,8 @@ categories:
 tags:
   - Data Science
   - R
+toc: true
+toc_sticky: true
 ---
 
 # 2.2 데이터 조작
