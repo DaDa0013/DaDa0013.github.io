@@ -6,6 +6,8 @@ categories:
 tags:
   - Data Structure
   - Python
+toc: true
+toc_sticky: true
 ---
 
 # 연결리스트(linked list)
