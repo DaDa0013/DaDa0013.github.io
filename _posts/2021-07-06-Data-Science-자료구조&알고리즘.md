@@ -6,6 +6,8 @@ categories:
 tags:
   - Data Science
   - Python
+toc: true
+toc_sticky: true
 ---
 
 ![image](https://user-images.githubusercontent.com/79195793/124610496-865dcc00-deab-11eb-8c54-23723ffe8a72.png)
