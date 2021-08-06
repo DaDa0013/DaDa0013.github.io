@@ -2,7 +2,8 @@
 title: "Data Science 자료구조&알고리즘"
 categories:
   - Data Science
-  - Python
+  - Algorithm
+  - Data Structure
 tags:
   - Data Science
   - Python
