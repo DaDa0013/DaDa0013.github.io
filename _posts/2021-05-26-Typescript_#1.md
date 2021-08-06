@@ -6,6 +6,8 @@ categories:
 tags:
   - Typescript
   - Blockchain
+toc: true  
+toc_sticky: true 
 ---
 
 # typescript란
