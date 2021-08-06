@@ -6,6 +6,8 @@ categories:
 tags:
   - R
   - Data Science
+toc: true
+toc_sticky: true
 ---
 ![image](https://user-images.githubusercontent.com/79195793/124612202-1b14f980-dead-11eb-8af4-20ffd0afcb85.png)
 ![image](https://user-images.githubusercontent.com/79195793/124612279-29631580-dead-11eb-9c38-f836fff02082.png)
