@@ -8,6 +8,8 @@ tags:
   - Data Science
   - matplotlib
   - seaborn
+toc: true
+toc_sticky: true
 ---
 
 # Matplotlib
