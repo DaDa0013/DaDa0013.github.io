@@ -2,13 +2,9 @@
 title: "우버이츠클론코딩 #1 Introduction"
 categories:
   - clone coding
-  - Uber Eats
-  - Nest JS
-  - typeORM
-  - postgreSQL
-  - pgadmin4
+  - PostgreSQL
 tags:
-  - CloneCoding
+  - Clone Coding
   - Uber Eats
   - Nest JS
   - typeORM
