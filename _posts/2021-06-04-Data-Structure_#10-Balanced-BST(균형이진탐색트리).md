@@ -6,6 +6,8 @@ categories:
 tags:
   - Data Structure
   - Python
+toc: true
+toc_sticky: true
 ---
 
 # 균형이진탐색트리(Balanced BST)
