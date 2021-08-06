@@ -6,6 +6,8 @@ categories:
 tags:
   - Data Structure
   - Python
+toc: true
+toc_sticky: true
 ---
 
 # 해시 테이블(Hash Table)
