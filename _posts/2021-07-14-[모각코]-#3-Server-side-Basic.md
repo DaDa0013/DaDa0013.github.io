@@ -3,11 +3,9 @@
 title: "[모각코] #3 Server-side Basic"
 categories:
   - Hacking
-  - MGK
   - Web
 tags:
   - Hacking
-  - MGK
   - Web
 toc: true
 toc_sticky: true
