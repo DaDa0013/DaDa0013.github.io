@@ -6,6 +6,8 @@ categories:
 tags:
   - Data Structure
   - Python
+toc: true
+toc_sticky: true
 ---
 
 # Red-Black Tree
