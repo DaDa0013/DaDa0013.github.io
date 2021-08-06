@@ -1,7 +1,7 @@
 ---
 title: "자료구조"
 layout: archive
-permalink: categories/data_structure
+permalink: categories/
 author_profile: true
 sidebar_main: true
 ---
