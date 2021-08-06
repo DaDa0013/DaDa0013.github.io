@@ -6,6 +6,8 @@ categories:
 tags:
   - Hacking
   - MGK
+toc: true
+toc_sticky: true
 ---
 
 # NoSQL
