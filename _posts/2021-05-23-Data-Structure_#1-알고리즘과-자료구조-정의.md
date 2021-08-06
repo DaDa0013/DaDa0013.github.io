@@ -6,6 +6,8 @@ categories:
 tags:
   - Data Structure
   - Python
+toc: true  
+toc_sticky: true 
 ---
 
 ## 자료구조 & 알고리즘 개념
