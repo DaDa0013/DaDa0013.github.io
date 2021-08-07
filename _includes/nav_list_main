@@ -85,15 +85,24 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Machine Learning" %}
-                        <li><a href="/categories/machine_learning" class="">R({{category[1].size}})</a></li>
+                        <li><a href="/categories/machine_learning" class="">Machine Learning({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-        <span class="nav__sub-title">Deap Learning</span>
+        <span class="nav__sub-title">Deep Learning</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Deap Learning" %}
-                        <li><a href="/categories/deap_learning" class="">R({{category[1].size}})</a></li>
+                    {% if category[0] == "Deep Learning" %}
+                        <li><a href="/categories/deap_learning" class=""> Deep Learing({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            
+        <span class="nav__sub-title">Coding Test</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Coding Test" %}
+                        <li><a href="/categories/codingtest" class=""> Coding Test({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
