@@ -1,6 +1,6 @@
 ---
 
-title: "[모각코] #3 Server-side Basic"
+title: "[모각코] #3 드림핵 3강 Server-side Basic"
 categories:
   - Hacking
   - Web
