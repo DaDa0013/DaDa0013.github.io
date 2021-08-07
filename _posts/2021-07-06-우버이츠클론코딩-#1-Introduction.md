@@ -4,12 +4,10 @@ categories:
   - clone coding
   - PostgreSQL
 tags:
-  - Clone Coding
-  - Uber Eats
+  - clone Coding
   - Nest JS
   - typeORM
-  - postgreSQL
-  - pgadmin4
+  - PostgreSQL
 toc: true
 toc_sticky: true
 ---
