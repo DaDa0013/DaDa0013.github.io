@@ -28,16 +28,14 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-        <span class="nav__sub-title">Data Structure</span>
+        <span class="nav__sub-title">Data Structure & Algorithm</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Data Structure" %}
-                        <li><a href="/categories/data_structure" class="">Data Structure ({{category[1].size}})</a></li>
+                        <li><a href="/categories/data_structure" class="">Data Structure  ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-
-        <span class="nav__sub-title">Algorithm</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Algorithm" %}
