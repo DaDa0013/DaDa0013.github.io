@@ -5,7 +5,7 @@ categories:
   - PostgreSQL
 tags:
   - clone coding
-  - Uber Eats
+  - PostgreSQL
   - Nest JS
   - typeORM
 toc: true
