@@ -18,8 +18,7 @@ excerpt: "Backtracking"
 ## 단일 객체를 이동
 
 ### 겹치는지 여부 확인
-
-![image-20210809141342937](C:\Users\yttn0\AppData\Roaming\Typora\typora-user-images\image-20210809141342937.png)
+![image](https://user-images.githubusercontent.com/79195793/128682683-d1b492a8-1c8d-47b0-bbba-dc0007179281.png)
 
 1. **직접 순회**
 
@@ -66,7 +65,8 @@ excerpt: "Backtracking"
 
    -> Hash로 저장해서 찾아보기
 
-   ![image-20210809142229638](C:\Users\yttn0\AppData\Roaming\Typora\typora-user-images\image-20210809142229638.png)
+   ![image](https://user-images.githubusercontent.com/79195793/128682719-b0e1da2b-c385-4bf1-be84-ba2da04635dc.png)
+
 
    (아래는 python 코드)
 
@@ -172,7 +172,7 @@ else
   }
   ```
 
-![image-20210809173740958](C:\Users\yttn0\AppData\Roaming\Typora\typora-user-images\image-20210809173740958.png)
+![image](https://user-images.githubusercontent.com/79195793/128682774-ace33882-1c0c-4f7c-9726-34b2458ca6d3.png)
 
 ### K개 중 하나를 N번 선택하기
 
