@@ -120,6 +120,6 @@ excerpt: "backend"
 
   ->  pgadmin에서 직접 column을 추가해야 했었음
 
-  ![image-20210812011130132](C:\Users\yttn0\AppData\Roaming\Typora\typora-user-images\image-20210812011130132.png)
+  ![image](https://user-images.githubusercontent.com/79195793/129065090-7a08d9d4-14c9-464e-91fa-a9fa1c1579ac.png)
 
-  => 계정이 실제로 생성됨
+  => 계정이 실제로 생성됨(playground에서 확인)
