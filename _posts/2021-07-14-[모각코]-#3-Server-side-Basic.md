@@ -1,5 +1,4 @@
 ---
-
 title: "[모각코] #3 드림핵 3강 Server-side Basic"
 categories:
   - Hacking
@@ -9,6 +8,7 @@ tags:
   - Web
 toc: true
 toc_sticky: true
+
 ---
 
 # Server-side(서버 사이드)
@@ -96,7 +96,7 @@ toc_sticky: true
 
 * **OS Command**:
 
-   linux(ls, pwd, ping, zip), windows(dir, pwd, ping) 등의 OS에서 사용하는 명령어
+  linux(ls, pwd, ping, zip), windows(dir, pwd, ping) 등의 OS에서 사용하는 명령어
 
   **->이미 기능을 구현한 OS 실행 파일이 존재할 때 코드 상에서 다시 구현하지 않고 OS Command실행하면 더 편리**
 
@@ -127,7 +127,7 @@ toc_sticky: true
 
   * **문제점**:
 
-     사용자의 입력 데이터가 Command 인자가 아닌 다른 값으로 해석
+    사용자의 입력 데이터가 Command 인자가 아닌 다른 값으로 해석
 
   * **해결방법**:
 
@@ -419,7 +419,7 @@ ex)
 
 - **실습**
 
-```js
+```php
 <?php
 if(!empty($_FILES['file'])){
   $filename = generateRandomString(); // custom function
@@ -442,7 +442,7 @@ if(!empty($_FILES['file'])){
 
 * 예시 코드 exploit.php
 
-```
+```php
 <?php  system("ls");?>
 ```
 
@@ -451,7 +451,7 @@ if(!empty($_FILES['file'])){
 
 * 예시 코드 exploit.html
 
-```
+```html
 <script>alert(1);</script>
 ```
 
@@ -507,14 +507,17 @@ if(!empty($_FILES['file'])){
   ```js
   @app.route("/download")
   def download():
-      file_id = request.args.get("file_id", "")     # file_id는 쉽게 유추하지 못하는 랜덤한 값이어야 합니다.
-      file_path = find_path_from_database(file_id)  # find_path_from_database 함수는 데이터베이스에서 file_id와 매핑된 파일 경로를 반환하는 개발자가 작성한 함수입니다.
+      file_id = request.args.get("file_id", "")    
+  	// file_id는 쉽게 유추하지 못하는 랜덤한 값이어야 합니다.
+      file_path = find_path_from_database(file_id)  
+  	//find_path_from_database 함수는 데이터베이스에서 file_id와 매핑된 파일 경로를 반환하는 개발자가 작성한 함수입니다.
       if file_path is None:
           return "올바르지 않은 파일 아이디입니다."
       return open(file_path, "rb").read()
   ```
 
   
+
 # Business Logic Vulnerability (비즈니스 로직 취약점)
 
 : 인젝션, 파일 관련 취약점들과는 다르게 정상적인 흐름을 악용하는 것을 의미
@@ -542,7 +545,7 @@ if(!empty($_FILES['file'])){
     	if review_owner_check(userName):
     		return "owner check fail."
     	result = review_Delete(idx)
-    	# userPoint(userName, -100)
+    	// userPoint(userName, -100)
     	if result :
     		return "delete success."
     	else:
@@ -591,19 +594,19 @@ if(!empty($_FILES['file'])){
 
   - **php**
 
-  ```
+  ```php
   <?php   eval("1+1"); // 2 ?>
   ```
 
   - **python**
 
-  ```
+  ```python
   eval("1+1") # 2exec("2+2") # 4 # eval은 하나의 식만을 처리하지만, exec은 하나의 문장을 처리합니다.eval("a=1") # SyntaxError: invalid syntaxexec("a=1") # a=1
   ```
 
   - **javascript**
 
-  ```
+  ```js
   eval("1+1"); // 2
   ```
 
@@ -662,7 +665,7 @@ if(!empty($_FILES['file'])){
 
   * **serialize(직렬화)**:
 
-     Object 또는 Data의 상태 또는 타입을 특정한 형태의 포맷을 가진 데이터로 변환하는 것을 의미
+    Object 또는 Data의 상태 또는 타입을 특정한 형태의 포맷을 가진 데이터로 변환하는 것을 의미
 
     -> **오브젝트, 데이터의 현재 상태와 타입들을 저장**
 
@@ -683,8 +686,9 @@ if(!empty($_FILES['file'])){
     * 직렬화/역직렬화 예시 코드
 
     ```js
-    import pickleclass TestClass:  def __init__(self, a, b):    self.A = a    self.B = b# TestClass 생성, ClassA로 할당ClassA = TestClass(31337,10001)
-    # ClassA 직렬화ClassA_dump = pickle.dumps(ClassA)print(ClassA_dump)# ClassA 역직렬화, ClassB로 할당ClassB = pickle.loads(ClassA_dump)print(ClassB.A, ClassB.B)
+    import pickleclass TestClass:  def __init__(self, a, b):    self.A = a    self.B = b
+    //TestClass 생성, ClassA로 할당ClassA = TestClass(31337,10001)
+    // ClassA 직렬화ClassA_dump = pickle.dumps(ClassA)print(ClassA_dump)# ClassA 역직렬화, ClassB로 할당ClassB = pickle.loads(ClassA_dump)print(ClassB.A, ClassB.B)
     ```
 
     - 실행 결과
@@ -703,7 +707,7 @@ if(!empty($_FILES['file'])){
 
     ```js
     import pickleimport osclass TestClass:  def __reduce__(self):  	return os.system, ("id", )ClassA = TestClass()
-    # ClassA 직렬화ClassA_dump = pickle.dumps(ClassA)print(ClassA_dump)# 역직렬화pickle.loads(ClassA_dump)
+    // ClassA 직렬화ClassA_dump = pickle.dumps(ClassA)print(ClassA_dump)# 역직렬화pickle.loads(ClassA_dump)
     ```
 
     - 실행 결과
@@ -732,7 +736,8 @@ if(!empty($_FILES['file'])){
 
        ```js
        serialize_func_1 = {"test":"_$$ND_FUNC$$_function(){ return 'Hello'; }"}console.log(serialize.unserialize(serialize_func_1));
-       /*{ test: [Function (anonymous)]        }*/serialize.unserialize(serialize_func_1)['test']()/*'Hello'*/
+       /*{ test: [Function (anonymous)]        }*/
+       serialize.unserialize(serialize_func_1)['test']()/*'Hello'*/
        ```
 
        직렬화된 object 값을 역직렬화 시키면 원래 object 형태로 나옴
@@ -753,8 +758,7 @@ if(!empty($_FILES['file'])){
        ```js
        var serialize = require('node-serialize');
        serialize_exploit_func = {"test":"_$$ND_FUNC$$_function (){require('child_process').exec('id', function(error, stdout, stderr)
-       { console.log(stdout) });
-       }()"
+       {console.log(stdout) });}()"
        }
        console.log(serialize.unserialize(serialize_exploit_func));/*uid=1000(dreamhack) gid=1000(dreamhack) groups=1000(dreamhack)*/
        ```
