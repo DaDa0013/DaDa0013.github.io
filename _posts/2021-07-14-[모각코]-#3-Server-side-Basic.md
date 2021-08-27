@@ -8,7 +8,7 @@ tags:
   - Web
 toc: true
 toc_sticky: true
-
+excerpt: "Server-side"
 ---
 
 # Server-side(서버 사이드)
@@ -725,7 +725,8 @@ if(!empty($_FILES['file'])){
        - serialize 예시 코드
 
        ```js
-       var serialize = require('node-serialize');x = {	test : function(){ return 'Hello'; }};console.log(serialize.serialize(x));
+       var serialize = require('node-serialize');x = {	test : function(){ return 'Hello'; }};
+       console.log(serialize.serialize(x));
        /*{"test":"_$$ND_FUNC$$_function(){ return 'Hello'; }"}*/
        ```
 
@@ -735,8 +736,10 @@ if(!empty($_FILES['file'])){
        
 
        ```js
-       serialize_func_1 = {"test":"_$$ND_FUNC$$_function(){ return 'Hello'; }"}console.log(serialize.unserialize(serialize_func_1));
-       /*{ test: [Function (anonymous)]        }*/
+       serialize_func_1 = {"test":"_$$ND_FUNC$$_function(){ return 'Hello'; }"}
+       console.log(serialize.unserialize(serialize_func_1));
+       /*{ test: [Function (anonymous)]        
+       }*/
        serialize.unserialize(serialize_func_1)['test']()/*'Hello'*/
        ```
 
