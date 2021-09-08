@@ -3,9 +3,11 @@ title: "Data Structure_#1 알고리즘과 자료구조 정의"
 categories: 
   - Data Structure
   - Python
+  - algorithm
 tags:
   - Data Structure
   - Python
+  - algorithm
 toc: true  
 toc_sticky: true 
 ---
