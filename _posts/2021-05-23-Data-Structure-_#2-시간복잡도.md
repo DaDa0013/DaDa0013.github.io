@@ -7,7 +7,7 @@ categories:
 tags:
   - Data Structure
   - Python
-  - -Algorithm
+  - Algorithm
 toc: true  
 toc_sticky: true 
 ---
