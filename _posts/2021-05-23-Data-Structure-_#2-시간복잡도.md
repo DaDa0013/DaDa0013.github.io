@@ -2,12 +2,19 @@
 title: "Data Structure _#2 시간복잡도"
 categories:
   - Data Structure
+  - python
+  - Algorithm
 tags:
   - Data Structure
   - Python
+  - -Algorithm
 toc: true  
 toc_sticky: true 
 ---
+## 수행시간
+
+* 최악의 경우의 입력에 대한 기본 연산 횟수
+
 
 ## 시간 복잡도(time complexity)
 
