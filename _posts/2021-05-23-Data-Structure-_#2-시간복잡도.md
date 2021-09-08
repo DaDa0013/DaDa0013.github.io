@@ -2,7 +2,7 @@
 title: "Data Structure _#2 시간복잡도"
 categories:
   - Data Structure
-  - python
+  - Python
   - Algorithm
 tags:
   - Data Structure
