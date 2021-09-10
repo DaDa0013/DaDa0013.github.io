@@ -360,9 +360,9 @@ export class Verification extends CoreEntity {
   </html>
   ```
 
-  ![image-20210910170705522](image/image-20210910170705522.png)
+  ![image](https://user-images.githubusercontent.com/79195793/132830295-8bd20da2-4d5d-4fc9-95d4-113805d7191a.png)
 
-![image-20210910171004695](image/image-20210910171004695.png)
+![image](https://user-images.githubusercontent.com/79195793/132830320-1c61b44c-2e2a-47f5-81fc-ca283e68e092.png)
 
 * mail.service.ts
 
@@ -421,7 +421,7 @@ export class Verification extends CoreEntity {
   
   ```
 
-  ![image-20210910171521136](image/image-20210910171521136.png)
+  ![image](https://user-images.githubusercontent.com/79195793/132830333-ebf41ba3-144a-4b0a-82c4-a5e1183531df.png)
 
   -> 내 메일로 옴
 
