@@ -10,6 +10,7 @@ tags:
   - typeORM
 toc: true
 toc_sticky: true
+excerpt:"email verification"
 ---
 
 ## User verification
