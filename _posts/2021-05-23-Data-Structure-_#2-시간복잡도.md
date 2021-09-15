@@ -1,5 +1,5 @@
 ---
-title: "Data Structure _#2 시간복잡도"
+title: "Data Structure & Algorithm _#2 시간복잡도"
 categories:
   - Data Structure
   - Python
