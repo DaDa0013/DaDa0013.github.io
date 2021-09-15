@@ -1,5 +1,5 @@
 ---
-title: "Data Structure_#1 알고리즘과 자료구조 정의"
+title: "Data Structure & Algorithm_#1 알고리즘과 자료구조 정의"
 categories: 
   - Data Structure
   - Python
