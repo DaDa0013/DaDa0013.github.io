@@ -96,7 +96,7 @@ jest.mock('jsonwebtoken', () => {
 
 # Mail test
 
-```
+```typescript
 import { Test } from '@nestjs/testing';
 import { CONFIG_OPTIONS } from 'src/common/common.constant';
 import { MailService } from './mail.service';
